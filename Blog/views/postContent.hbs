@@ -1,0 +1,66 @@
+<div class="postContent" id="postContent">
+	<a href="/" id='goback'>返回</a>
+	<hr>
+	{{#each re}}
+	<h1 id="posttitle">{{this.title}}</h1>
+
+	{{/each}}
+	{{#if is_login}}
+
+	{{#if is_focus}}
+	<button id="focusOn" >
+		<a href="/focus?meg={{atid}}" class="focus" id="focus">+关注</a>
+	</button>
+	{{/if}}
+	
+	<a href="/good?meg={{atid}}" id="good">
+		<img src="/img/good.png" id="zan">
+		
+	</a>
+
+	<!-- 收藏前 -->
+	{{#if not_collect}}
+	<a href="/collect?meg={{atid}}" id="collect">
+		<img src="/img/collect_no.png" style="width: 30px; height: 30px;">收藏
+	</a>
+	{{/if}}
+
+	<!-- 收藏后 -->
+	{{#if is_collect}}
+	<a href="" id="collect">
+		<img src="/img/collect_yes.png"  style="width: 30px; height: 30px;">已收藏
+	</a>
+	{{/if}}
+	{{/if}}
+
+	{{#each re}}
+	<div id="message2">点赞数:{{this.good_count}}</div>
+	<div id="message">
+	作者:{{this.author}} 发布于:{{this.time}}阅读数:{{this.look_count}}
+	</div>
+	<hr>
+	<div id="post-content">{{this.aticles}}</div>
+	{{/each}}
+	<hr>
+	<!-- 写评论区 -->
+	{{#if is_login}}
+	<form action="/reply?mend={{atid}}" method="post">
+		<textarea class="form-control" rows="3" name="replyPost" id="replyPost"  placeholder="想对作者说些什么"></textarea>
+		<input type="submit" class="btn btn-default" name="replyBtn" value="发表评论" 
+		id="replyBtn">
+		<p id="reply-tip"></p>
+	</form>
+	{{/if}}
+	<br>
+	<!-- 评论区 -->
+	{{#each re1}}
+	<div>
+		<div id="reply-title">{{this.author}}</div>
+		<div id="reply-time">{{this.time}}</div>
+		<div id="reply-content">{{this.content}}</div>
+	</div>
+	<hr>
+	{{/each}}
+
+
+</div>

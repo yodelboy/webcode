@@ -1,0 +1,22 @@
+<div id="per_collect">
+	<table class="table table-hover">
+		<tr>
+			<td>帖子类型</td>
+			<td>标题</td>
+			<td>发帖人</td>
+			<td>发表时间</td>
+			<td>点击量</td>
+		</tr>
+
+		{{#each post}}
+		<tr>
+			<td><p style="color: #6699FF">{{this.part}}</p></td>
+			<td width="500px"><a href="/openPost?temp={{this._id}}" class="postTitle" id="{{this._id}}">{{this.title}}</a></td>
+			<td>{{this.author}}</td>
+			<td>{{this.time}}</td>
+			<td>{{this.look_count}}</td>
+			
+		</tr>
+		{{/each}}
+	</table>
+</div>

@@ -1,0 +1,47 @@
+<p id="hometip" style="color: red">{{noLogin}} {{postSuccess}}</p>
+<div class="part">
+	<div class="col-sm-3 col-md-2 sidebar">
+		<ul class="nav nav-sidebar">
+			<li class="{{active_all}}"><a href="/">全部 <span class="sr-only">(current)</span></a></li>
+			<li class="{{active_C}}"><a href="/isC">C</a></li>
+			<li class="{{active_Java}}"><a href="/isJava">Java</a></li>
+			<li class="{{active_front}}"><a href="/isfront">前端开发</a></li>
+			<li class="{{active_end}}"><a href="/isend">后端开发</a></li>
+			<li class="{{active_data}}"><a href="/isdata">数据库</a></li>
+			<li class="{{active_Artificial}}"><a href="/isArtificial">人工智能</a></li>
+			<li class="{{active_Frame}}"><a href="/isFrame">架构</a></li>
+			<li class="{{active_game}}"><a href="isgame">游戏开发</a></li>
+		</ul>
+	</div>
+</div>
+{{#if isTable}}
+<div class="postTips">
+	<table class="table table-hover">
+		<tr>
+			<td>帖子类型</td>
+			<td>标题</td>
+			<td>发帖人</td>
+			<td>发表时间</td>
+			<td>点击量</td>
+		</tr>
+
+		{{#each resq}}
+		<tr>
+			<td><p style="color: #6699FF">{{this.part}}</p></td>
+			<td width="500px"><a href="/openPost?temp={{this._id}}" class="postTitle" id="{{this._id}}">{{this.title}}</a></td>
+			<td>{{this.author}}</td>
+			<td>{{this.time}}</td>
+			<td>{{this.look_count}}</td>
+		</tr>
+		{{/each}}
+	</table>
+</div>
+<nav aria-label="..." id='page'>
+  <ul class="pager">
+    <li>
+    <a href="/changepage?page={{lastpage}}&whattype={{whattype}}" id="{{pageAllNum}}"><span aria-hidden="true">&larr;</span>older</a></li>
+    <li>
+    <a href="/changepage?page={{nextpage}}&whattype={{whattype}}">Next<span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+{{/if}}	

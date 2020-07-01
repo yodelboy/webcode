@@ -1,0 +1,68 @@
+<a href="/" id='back'><<返回首页</a>
+<div class="per_info">
+	<p id='person_t'>个人资料</p>
+	<hr style="width: 800px; height:1px;border:none;border-top:1px solid #555555;" />
+	<img src="{{img}}" id="person_pic1">
+	<div class="info1">
+		<p>用户名：{{id}}</p>
+		<p>关注：    粉丝:</p>
+	</div>
+	<a  id="changepic">修改头像</a>
+	<hr style="width: 800px; height:1px;border:none;border-top:1px solid #555555;" />
+	<div class="info2">
+		<a id="login-link">修改资料</a>
+		<p>真实姓名：{{realname}}</p>
+		<p>性别：{{sex}}</p>
+		<p>出生年月：{{birth}}</p>
+		<p>地区：{{place}}</p>
+		<p>职业：{{job}}</p>
+		<p>简介：{{info}}</p>
+	</div>
+</div>
+<div style="display: none" class="shadow" id="shadow"></div>
+<div style="display: none" id="login-box" class="login-box">
+	<form action="/change_info" method="post">
+		<div class="close-btn">
+			<img src="/img/x.png" width="30" height="30" id="close-login-btn" alt="">
+		</div>
+		<p id='changeinfo'>修改资料</p>
+		<div class="input-item">
+			<input type="text" class="form-control" name="realname" id="realname" placeholder="请输入您的真实姓名">
+		</div>
+		<div class="input-item">
+			<select class="form-control" name="sex">
+				<option>男</option>
+				<option>女</option>
+			</select>
+		</div>
+		<div class="input-item">
+			<label for="birth">出生年月</label>
+			<input type="date" name="birth" id="birth">
+		</div>
+		<div class="input-item">
+			<input type="text" class="form-control" name="place" id="place" placeholder="输入您的所在地区">
+		</div>
+		<div class="input-item">
+			<input type="text" class="form-control" name="job" id="job" placeholder="输入您的职业">
+		</div>
+		<div class="input-item">
+			<textarea class="form-control" rows="3" name="info" id="info" placeholder="个人简介"></textarea>
+		</div>
+		<div class="input-item">
+			<input type="submit" class="btn btn-default" name="change_btn" value="修改" id="change_btn">
+		</div>
+	</form>
+</div>
+<div style="display: none" id="changepic-box" class="changepic-box">
+	<div class="change-btn">
+		<img src="/img/x.png" width="30" height="30" id="close-change-btn" alt="">
+	</div>
+	<p id='changeinfo'>修改头像</p>
+	<div class="pic">
+		<form action="/changepic" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			<input type="file" name="file" id="file" /> 
+			<br><br>
+			<input type="submit" class="btn btn-default" name="submit" value="上传" id="pic_sub">
+		</form>
+	</div>
+</div>
