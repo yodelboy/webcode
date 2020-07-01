@@ -1,0 +1,276 @@
+/*public*/
+*{
+
+	color:#666;
+}
+body
+{
+	background: #EEE;
+}
+#all
+{
+	position: absolute;
+	width: 86%;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+a
+{
+	text-decoration: none;
+}
+
+
+/*header*/
+#header
+{
+	margin:  0px 0px 10px 0px;
+
+}
+.userimage
+{
+	transform: translateX(20%) translateY(20%);
+	width: 50px;
+	height: 50px;
+}
+#register-a{
+	float:left;
+	text-decoration: none;
+	font-size: 15px;
+	color: #8B6969;
+	border-radius: 10px;
+	border: 1px solid #707070;
+	padding:5px 15px 5px 15px;
+}
+
+
+/*整体圆角块*/
+main
+{
+	/*border: 1px solid #000;*/
+	border-radius: 10px;
+	overflow: hidden;
+	background-color:transparent;
+}
+
+main h1
+{
+	position: relative;
+	top:50%;
+	transform: translateY(-50%);
+	margin: 0px 0px 0px 20px;
+	color:  #FFFAF0;
+}
+/*左侧验证块 */
+aside{
+	padding-left: 30px;
+	width: 70%;
+	float:left;
+	background-color:transparent;
+}
+/*每个div块*/
+.mode{
+	margin: 15px;
+}
+/*提示语*/
+.m1{
+	font-size:10px;
+	margin:0px 0px 0px 160px;
+	color: #999;
+}
+/*每个div里提示语和输入框作为单独的元素块水平排列*/
+main dd{
+	display: inline-block;
+	width:100px;
+}
+main dt{
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+/*中线对齐*/
+.register{
+	float:right;
+}
+input{
+
+	width: 240px;
+	height: 25px;
+	border:1.5px solid #A69D86;
+	background-color:transparent;
+	border-radius: 20px;
+	height: 40px;
+	width: 400px;
+}
+
+#checked
+{
+	width: 13px;
+	height: 13px;
+	/*margin: -10px 0px 0px 0px;*/
+}
+/*服务条款*/
+#SVR
+{
+	margin: -20px 0px 20px 160px;
+	font-size: 12px;
+}
+/*看不清楚换一张*/
+#cansee
+{
+	margin: 0px 0px 0px 430px;
+	font-size: 13px;
+}
+
+/*验证图片*/
+#checkimg
+{
+	position: relative;
+	top: 20%;
+	left: -17%;
+	 margin: -10px 20px;
+	 width: 100px;
+	 height: 30px;
+}
+.btn
+{
+	position: relative;
+	width: 80%;
+	text-align: center;
+	margin: 0px 0px 30px 0px;
+}
+#btnClk{
+	display: inline-block;
+	width: 400px;
+	height: 50px;
+	background-color:#A69D86;
+	border-radius:25px;
+	line-height: 50px;
+	text-decoration: none;
+	color:white;
+}
+/*section*/
+section
+{
+	width: 20%;
+	float: left;
+	height: 100%;
+}
+/*section img*/
+#icon
+{
+	width: 100%;
+	position: relative;
+	top: 50%;
+	left: 10%;
+	transform: translateX(-50%) translateY(5%);
+
+}
+#welcome{
+	width:200%;
+	position: relative;
+	top: 30%;
+	left:-250px;
+}
+/*section end*/
+
+/*main end*/
+/*footer*/
+footer
+{
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-size: 5px;
+}
+#email
+{
+	color: #274973;
+	font-size: 13px;
+}
+#zhuce1{
+	margin-top:50px;
+}
+/*footer end*/
+@media all and (max-width:768px){
+
+main header
+{
+	background-color:transparent;
+	height:50px;
+	padding: 130px;
+}
+#icon
+{
+	width: 20%;
+	position: absolute;
+	top: 120px;
+	left: 280px;
+	transform: translateX(-50%) translateY(5%);
+
+}
+#welcome{
+	width:50%;
+	position: absolute;
+	top:250px;
+	left:150px;
+}
+.m1{
+	font-size:10px;
+	margin:0px 0px 0px 160px;
+	color: #999;
+}
+input{
+	height: 25px;
+	border:1.5px solid #A69D86;
+	background-color:transparent;
+	border-radius: 30px;
+	height: 40px;
+	width:210px;
+}
+/*验证图片*/
+#checkimg
+{
+	position: absolute;
+	top: 650px;
+	left: 400px;
+	 margin: -10px 20px;
+	 width: 100px;
+	 height: 30px;
+}
+.btn
+{
+	position: absolute;
+	top: 750px;
+	left: 50px;
+	text-align: center;
+	margin: 0px 0px 30px 0px;
+}
+#btnClk{
+	display: inline-block;
+	width: 220px;
+	height: 50px;
+	margin-left: 30px;
+	background-color:#A69D86;
+	border-radius:30px;
+	line-height: 50px;
+	text-decoration: none;
+	color:white;
+}
+#cansee
+{
+	position: absolute;
+	top:670px;
+	left: -10px;
+	margin: 0px 0px 0px 430px;
+	font-size: 13px;
+}
+/*服务条款*/
+#SVR
+{
+	position: absolute;
+	top:720px;
+	left: 30px;
+	margin: -20px 0px 20px 160px;
+	font-size: 12px;
+}
+}

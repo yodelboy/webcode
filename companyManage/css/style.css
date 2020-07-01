@@ -1,0 +1,94 @@
+body{
+	background:rgba(112,112,112,0.31);
+}
+.enterUI{
+	width:1200px;
+	margin:auto;
+	margin-top:50px;
+	border: 1px solid gray;
+	background-color: #EEEEEE;
+}
+#title{
+	margin-top: 80px;
+	text-align: center;
+	font-size: 21px;
+	margin-bottom: 40px;
+}
+#username{
+	border-radius: 20px;
+	width:300px;
+	margin-left:445px;
+	padding-left:45px;
+	background:url(../img/u.png) no-repeat 10px;
+}
+#password{
+	margin-top: 30px;
+	border-radius: 20px;
+	width:300px;
+	margin-left:445px;
+	padding-left:45px;
+	background:url(../img/p.png) no-repeat 10px;
+}
+#button_enter{
+	width:300px;
+	height:40px;
+	border-radius: 20px;
+	margin-left:445px;
+	background-color: #A69D86;
+	margin-top: 30px;
+	color:white;
+	font-size:18px;
+	margin-bottom: 15px;
+}
+.copy{
+	text-align: center;
+}
+#copy2{
+	margin-bottom: 250px;
+}
+#bg{
+	float: right;
+	width:800px;
+	margin-top: -455px;
+	margin-right:210px;
+}
+#admin_enter{
+	float:right;
+	font-size: 15px;
+	text-decoration: none;
+	color:#A69D86;
+	margin-top: 20px;
+}
+#zhuce{
+	float:right;
+	font-size: 15px;
+	text-decoration: none;
+	color:#A69D86;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#final{
+	font-size:20px;
+	margin-left:640px;
+}
+@media all and (max-width:768px){
+	.enterUI{
+		width:500px;
+	}
+	#username{
+		margin-left:95px;
+	}
+	#password{
+		margin-left:95px;
+	}
+	#button_enter{
+		margin-left:95px;
+	}
+	#bg{
+		float: left;
+		width:480px;
+		padding-top: 180px;
+	}
+}
+
